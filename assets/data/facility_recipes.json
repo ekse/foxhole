@@ -1,0 +1,19 @@
+{
+    "recipe1": {
+        "inputs": [["Salvage", 10]],
+        "output": "Construction Materials",
+        "location": "Materials Factory",
+        "type": "material",
+        "output_count": 1,
+        "production_time": 25
+    },
+    "recipe2": {
+        "inputs": [["Salvage", 2]],
+        "output": "Basic Materials",
+        "location": "Materials Factory",
+        "type": "material",
+        "input_count": 2,
+        "output_count": 1,
+        "production_time": 0.48
+    }
+}
