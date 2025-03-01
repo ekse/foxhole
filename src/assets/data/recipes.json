@@ -13,5 +13,14 @@
         "location": "Small Assembly Station",
         "type": "vehicle",
         "production_time": 180
+    },
+
+    "SmallAssemblyStation_Tankette": {
+        "inputs": [["Construction Materials", 10], ["Assembly Materials I", 15]],
+        "output": "TanketteIxion",
+        "location": "Small Assembly Station",
+        "type": "vehicle",
+        "production_time": 300
     }
+
 }
