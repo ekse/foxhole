@@ -9,5 +9,11 @@
         "name": "R-5b Sisyphus Hauler",
         "icon": "ProductionIcons/AssemblyStation/TruckSisyphus.png",
         "recipes": ["SmallAssemblyStation_TruckSisyphus"]
+    },
+
+    "TanketteIxion": {
+        "name": "T20 \"Ixion\" Tankette",
+        "icon": "ProductionIcons/AssemblyStation/TanketteIxion.png",
+        "recipes": ["SmallAssemblyStation_Tankette"]
     }
 }

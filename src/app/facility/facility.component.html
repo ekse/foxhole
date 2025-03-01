@@ -1,18 +1,11 @@
-<h2>Assets</h2>
+<h1 class="text-xl">Select something to craft</h1>
 
-@for (asset of assets; track asset)
+@for (key of assets.keys(); track key)
 {
-  <img [src]="asset.icon" height="100px">
+  <app-asset (selected)="onSelected(key)" [isSelected]="selectedAsset() === key" [asset]="assets.get(key)!"></app-asset>
 }
-
-
-
 
 <h2>Recipes</h2>
 
-@for (recipe of recipes; track recipe)
-{
-  <p>{{recipe.name}}</p>
-  <p>{{recipe.inputs}} ➡️ {{recipe.output}}</p>
-}
+<recipe-list [selectedAsset]="selectedAsset()" [availableRecipes]="selectedRecipes()"></recipe-list>
 
