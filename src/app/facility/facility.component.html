@@ -1,0 +1,18 @@
+<h2>Assets</h2>
+
+@for (asset of assets; track asset)
+{
+  <img [src]="asset.icon" height="100px">
+}
+
+
+
+
+<h2>Recipes</h2>
+
+@for (recipe of recipes; track recipe)
+{
+  <p>{{recipe.name}}</p>
+  <p>{{recipe.inputs}} ➡️ {{recipe.output}}</p>
+}
+

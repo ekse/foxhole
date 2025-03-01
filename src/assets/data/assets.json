@@ -1,0 +1,13 @@
+{
+    "MotorcycleStinger": {
+        "name": "00MS \"Stinger\"",
+        "icon": "ProductionIcons/AssemblyStation/MotorcycleStinger.png",
+        "recipes": ["SmallAssemblyStation_MotorcycleStinger"]
+    },
+    
+    "TruckSisyphus": {
+        "name": "R-5b Sisyphus Hauler",
+        "icon": "ProductionIcons/AssemblyStation/TruckSisyphus.png",
+        "recipes": ["SmallAssemblyStation_TruckSisyphus"]
+    }
+}

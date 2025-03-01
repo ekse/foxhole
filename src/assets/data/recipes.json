@@ -1,0 +1,17 @@
+{
+    "SmallAssemblyStation_TruckSisyphus": {
+        "inputs": [["Construction Materials", 10]],
+        "output": "TruckSisyphus",
+        "location": "Small Assembly Station",
+        "type": "vehicle",
+        "production_time": 300
+    },
+
+    "SmallAssemblyStation_MotorcycleStinger": {
+        "inputs": [["Construction Materials", 5]],
+        "output": "MotorcycleStinger",
+        "location": "Small Assembly Station",
+        "type": "vehicle",
+        "production_time": 180
+    }
+}
