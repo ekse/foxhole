@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, input, output } from '@angular/core';
-import { Asset } from '../types/asset';
+import { Asset, Craftable } from '../types/asset';
+import { RecipeName } from '../types/recipe';
 
 @Component({
   selector: 'app-asset',
@@ -8,17 +9,13 @@ import { Asset } from '../types/asset';
   styleUrl: './asset.component.scss',
 })
 export class AssetComponent implements OnInit {
-  id: string = '';
+  id: Craftable | null = null;
   name: string = '';
   icon: string = '';
-  recipes: string[] = [];
-  //id = input.required<string>();
-  //name = input.required<string>();
-  //icon = input.required<string>();
-  //recipes = input.required<[string]>();
+  recipes: RecipeName[] = [];
   selectionChanged = input<string>();
   isSelected = input<boolean>(false);
-  selected = output<string>();
+  selected = output<Craftable | null>();
   asset = input.required<Asset>();
 
   ngOnInit() {

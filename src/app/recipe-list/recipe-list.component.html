@@ -1,6 +1,9 @@
+<div class="m-{{4 * indent_level()}}">
 
 @for (recipe of availableRecipes(); track recipe)
 {
-    {{recipes.get(recipe)?.inputs}} ➡️ {{recipes.get(recipe)?.output}}
+    <app-recipe [recipe]="game_recipes.get(recipe)!" [indent_level]="indent_level() + 1"></app-recipe>
+
 }
 
+</div>
