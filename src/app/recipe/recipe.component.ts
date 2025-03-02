@@ -17,10 +17,14 @@ export class RecipeComponent {
   game_assets = GameAssets;
   indent_level = input<number>(0);
 
-  onSelected(id: Craftable) {
-    if (id != null) {
-      this.selectedCraftable.set(id);
-      this.selectedRecipes.set(GameAssets.get(id)!.recipes);
+  onSelected(recipe: RecipeName, craftable: Craftable) {
+    if (craftable == null) {
+      return;
+    }
+
+    if (this.recipe().id == recipe) {
+      this.selectedCraftable.set(craftable);
+      this.selectedRecipes.set(GameAssets.get(craftable)!.recipes);
     }
   }
 }

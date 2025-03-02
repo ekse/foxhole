@@ -1,6 +1,6 @@
-<div class="m-{{4 * indent_level()}}">
+<div class="m-8">
 
-@for (recipe of availableRecipes(); track recipe)
+@for (recipe of recipes(); track recipe)
 {
     <app-recipe [recipe]="game_recipes.get(recipe)!" [indent_level]="indent_level() + 1"></app-recipe>
 
