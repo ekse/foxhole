@@ -3,8 +3,8 @@
 <div>
 @for (input of recipe().inputs; track input)
 {
-    <app-asset (selected)="onSelected(input.craftable)" [isSelected]="selectedCraftable() === input.craftable" [asset]="game_assets.get(input.craftable)!"></app-asset>
+    <app-asset (selected)="onSelected(recipe().id, input.craftable)" [isSelected]="selectedCraftable() === input.craftable" [asset]="game_assets.get(input.craftable)!"></app-asset>
     {{input.count}}
-    <recipe-list [indent_level]="indent_level() + 1" [selectedCraftable]="selectedCraftable()" [availableRecipes]="selectedRecipes()"></recipe-list>
+    <recipe-list [class]="selectedCraftable() === input.craftable ? 'visible': 'invisible'" [craftable]="input.craftable" [indent_level]="indent_level() + 1" [selectedCraftable]="selectedCraftable()" [recipes]="game_assets.get(input.craftable)!.recipes"></recipe-list>
 }
 </div>

@@ -11,8 +11,9 @@ import { RecipeComponent } from '../recipe/recipe.component';
   styleUrl: './recipe-list.component.scss',
 })
 export class RecipeListComponent {
+  craftable = input<Craftable | null>();
   selectedCraftable = input<Craftable | null>();
-  availableRecipes = input<RecipeName[]>();
+  recipes = input<RecipeName[]>();
   game_recipes = GameRecipes;
   game_assets = GameAssets;
   indent_level = input<number>(0);
