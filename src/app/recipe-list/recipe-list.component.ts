@@ -1,49 +1,21 @@
-import { Component, input, OnInit } from '@angular/core';
-import * as recipeData from '../../assets/data/recipes.json';
-import * as facilityRecipeData from '../../assets/data/facility_recipes.json';
-import { Recipe, FacilityRecipe } from '../types/recipe';
+import { Component, input } from '@angular/core';
+import { RecipeName, GameRecipes } from '../types/recipe';
+
+import { Craftable, GameAssets } from '../types/asset';
+import { RecipeComponent } from '../recipe/recipe.component';
 
 @Component({
   selector: 'recipe-list',
-  imports: [],
+  imports: [RecipeComponent],
   templateUrl: './recipe-list.component.html',
   styleUrl: './recipe-list.component.scss',
 })
-export class RecipeListComponent implements OnInit {
-  recipes: Map<string, Recipe> = new Map();
+export class RecipeListComponent {
+  selectedCraftable = input<Craftable | null>();
+  availableRecipes = input<RecipeName[]>();
+  game_recipes = GameRecipes;
+  game_assets = GameAssets;
+  indent_level = input<number>(0);
 
-  // recipes: Recipe[] = [];
-  //facilityRecipes: FacilityRecipe[] = [];
-  selectedAsset = input<string>();
-  availableRecipes = input<string[]>();
-
-  private parseRecipes(): void {
-    let data: any = recipeData;
-    let keys: any = Object.keys(recipeData);
-
-    for (let key of keys) {
-      if (key == 'default') {
-        continue;
-      }
-
-      let entry = data[key];
-
-      console.log(entry);
-
-      let recipe: Recipe = {
-        name: key,
-        inputs: entry.inputs,
-        output: entry.output,
-        type: entry.type,
-        location: entry.location,
-        production_time: entry.production_time,
-      };
-
-      this.recipes.set(key, recipe);
-    }
-  }
-
-  ngOnInit(): void {
-    this.parseRecipes();
-  }
+  onSelected(id: Craftable) {}
 }

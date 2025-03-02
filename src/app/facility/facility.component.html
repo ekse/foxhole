@@ -1,11 +1,14 @@
-<h1 class="text-xl">Select something to craft</h1>
-
-@for (key of assets.keys(); track key)
+<h1 class="text-3xl">Select something to craft</h1>
+<div class="pb-5">
+@for (key of game_assets.keys(); track key)
 {
-  <app-asset (selected)="onSelected(key)" [isSelected]="selectedAsset() === key" [asset]="assets.get(key)!"></app-asset>
+  @if (game_assets.get(key)?.recipes!.length > 0) {
+    <app-asset (selected)="onSelected(key)" [isSelected]="selectedCraftable() === key" [asset]="game_assets.get(key)!"></app-asset>
+  }
+  
 }
+</div>
+<h1 class="text-3xl">Recipes</h1>
 
-<h2>Recipes</h2>
-
-<recipe-list [selectedAsset]="selectedAsset()" [availableRecipes]="selectedRecipes()"></recipe-list>
+<recipe-list [selectedCraftable]="selectedCraftable()" [availableRecipes]="selectedRecipes()"></recipe-list>
 
