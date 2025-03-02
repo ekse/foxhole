@@ -1,14 +1,14 @@
-import { Component, OnInit, Input, input, output } from '@angular/core';
-import { Asset, Craftable } from '../types/asset';
+import { Component, OnInit, input, output } from '@angular/core';
+import { Asset, Craftable } from '../types/craftable';
 import { RecipeName } from '../types/recipe';
 
 @Component({
-  selector: 'app-asset',
+  selector: 'app-craftable',
   imports: [],
-  templateUrl: './asset.component.html',
-  styleUrl: './asset.component.scss',
+  templateUrl: './craftable.component.html',
+  styleUrl: './craftable.component.scss',
 })
-export class AssetComponent implements OnInit {
+export class CraftableComponent implements OnInit {
   id: Craftable | null = null;
   name: string = '';
   icon: string = '';

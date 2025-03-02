@@ -3,7 +3,7 @@
 @for (key of game_assets.keys(); track key)
 {
   @if (game_assets.get(key)?.recipes!.length > 0) {
-    <app-asset (selected)="onSelected(key)" [isSelected]="selectedCraftable() === key" [asset]="game_assets.get(key)!"></app-asset>
+    <app-craftable (selected)="onSelected(key)" [isSelected]="selectedCraftable() === key" [asset]="game_assets.get(key)!"></app-craftable>
   }
   
 }
