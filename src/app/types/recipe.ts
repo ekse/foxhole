@@ -1,4 +1,4 @@
-import { Craftable } from '../types/asset';
+import { Craftable } from './craftable';
 
 export type CraftableCount = {
   craftable: Craftable;

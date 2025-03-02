@@ -1,12 +1,12 @@
 import { Component, input, signal, forwardRef } from '@angular/core';
 import { Recipe, RecipeName } from '../types/recipe';
-import { Craftable, GameAssets } from '../types/asset';
-import { AssetComponent } from '../asset/asset.component';
+import { Craftable, GameAssets } from '../types/craftable';
+import { CraftableComponent } from '../craftable/craftable.component';
 import { RecipeListComponent } from '../recipe-list/recipe-list.component';
 
 @Component({
   selector: 'app-recipe',
-  imports: [AssetComponent, forwardRef(() => RecipeListComponent)],
+  imports: [CraftableComponent, forwardRef(() => RecipeListComponent)],
   templateUrl: './recipe.component.html',
   styleUrl: './recipe.component.scss',
 })

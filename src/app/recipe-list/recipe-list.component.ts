@@ -1,7 +1,7 @@
 import { Component, input } from '@angular/core';
 import { RecipeName, GameRecipes } from '../types/recipe';
 
-import { Craftable, GameAssets } from '../types/asset';
+import { Craftable, GameAssets } from '../types/craftable';
 import { RecipeComponent } from '../recipe/recipe.component';
 
 @Component({
