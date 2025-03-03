@@ -1,1 +1,1 @@
-<img class="w-24 inline" [style.outline]="isSelected() ? 'solid' : 'none'" [src]="icon" (click)="selected.emit(id)">
+<img class="w-16 inline" [attr.title]="name" [style.outline]="isSelected() ? 'solid' : 'none'" [src]="icon" (click)="selected.emit(id)">

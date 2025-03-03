@@ -1,9 +1,8 @@
-<div class="m-8">
-
-@for (recipe of recipes(); track recipe)
-{
-    <app-recipe [recipe]="game_recipes.get(recipe)!" [indent_level]="indent_level() + 1"></app-recipe>
-
-}
-
+<div class="ml-8">
+  @for (recipe of recipes(); track recipe) {
+    <app-recipe
+      [craftable]="craftable()"
+      [recipe]="game_recipes.get(recipe)!"
+    ></app-recipe>
+  }
 </div>

@@ -1,4 +1,4 @@
-<h1 class="text-3xl">Select something to craft</h1>
+<h1 class="text-3xl m-2">Select something to craft</h1>
 <div class="pb-5">
 @for (key of game_assets.keys(); track key)
 {
@@ -7,8 +7,10 @@
   }
   
 }
+<div class="text-xl mt-2">{{selectedCraftable()}}</div>
 </div>
-<h1 class="text-3xl">Recipes</h1>
+
+<h1 class="text-3xl m-2">Recipes</h1>
 
 <recipe-list [craftable]="selectedCraftable()" [recipes]="selectedRecipes()"></recipe-list>
 

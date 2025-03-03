@@ -1,0 +1,8 @@
+<div class="inline">
+{{recipe().location}}
+
+@for (input of recipe().inputs; track input)
+{
+    <app-craftable [asset]="game_assets.get(input.craftable)!"></app-craftable>
+}
+</div>
