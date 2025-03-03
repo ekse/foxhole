@@ -16,7 +16,6 @@ export class RecipeListComponent {
   recipes = input<RecipeName[]>();
   game_recipes = GameRecipes;
   game_assets = GameAssets;
-  indent_level = input<number>(0);
 
   onSelected(id: Craftable) {}
 }

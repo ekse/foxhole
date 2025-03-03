@@ -1,4 +1,4 @@
-import { Component, OnInit, input, output } from '@angular/core';
+import { Component, OnInit, input, output, signal } from '@angular/core';
 import { Asset, Craftable } from '../types/craftable';
 import { RecipeName } from '../types/recipe';
 
